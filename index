@@ -1,1 +1,83 @@
 
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marco Fiera Tattoo Artist</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+
+  <img src="images/logo-marcofiera.png" alt="Marco Fiera Logo" class="logo">
+
+  <h1>MARCO FIERA</h1>
+
+  <p class="subtitle">
+    Tattoo Artist • Brindisi
+  </p>
+
+  <p class="quote">
+    "Ogni tatuaggio racconta una storia."
+  </p>
+
+  <div class="buttons">
+
+    <a href="https://wa.me/393473793894" target="_blank">
+      WhatsApp
+    </a>
+
+    <a href="https://www.instagram.com/_marcofiera_ttt" target="_blank">
+      Instagram
+    </a>
+
+  </div>
+
+</header>
+
+<section class="about">
+
+<h2>Chi Sono</h2>
+
+<p>
+Marco Fiera è un tattoo artist specializzato in realism,
+black & grey, cover up e progetti personalizzati.
+Ogni lavoro nasce dal confronto con il cliente per
+trasformare un'idea in un'opera unica.
+</p>
+
+</section>
+
+<section class="studio">
+
+<h2>Dove Lavoro</h2>
+
+<p>
+Presso Sailor Ink Tattoo Studio - Brindisi
+</p>
+
+<a href="https://www.instagram.com/sailor.ink_tattoostudio" target="_blank">
+Visita lo Studio
+</a>
+
+</section>
+
+<section class="portfolio">
+
+<h2>Portfolio</h2>
+
+<p>Galleria fotografica in aggiornamento.</p>
+
+</section>
+
+<footer>
+
+<p>© Marco Fiera Tattoo Artist</p>
+
+</footer>
+
+</body>
+</html>
