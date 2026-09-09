@@ -64,7 +64,7 @@ h1{
 .studio a{
     display:inline-block;
     text-decoration:none;
-    color:black;
+    color:#0a0a0a !important;
     background:#d4af37;
     padding:12px 25px;
     border-radius:30px;
