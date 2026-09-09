@@ -1,3 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0a0a0a;
+    color:white;
+    font-family:'Montserrat', sans-serif;
+    line-height:1.6;
+}
+
+h1,h2{
+    font-family:'Cinzel', serif;
+}
+
+.hero{
+    min-height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.logo{
+    width:180px;
+    max-width:70%;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:2.4rem;
+    color:#d4af37;
+    letter-spacing:2px;
+    white-space:nowrap;
+
+    border-bottom:2px solid #d4af37;
+    padding-bottom:15px;
+    display:inline-block;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+.quote{
+    margin-top:20px;
+    font-style:italic;
+    color:#d4af37;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.buttons a{
+    text-decoration:none;
+    color:black;
+    background:#d4af37;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.buttons a:hover{
+    transform:scale(1.05);
+}
+
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+h2{
+    color:#d4af37;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.studio-button{
+    display:block;
+    width:max-content;
+    margin:20px auto 0;
+    padding:12px 25px;
+    border-radius:30px;
+    background:#d4af37;
+    color:#000 !important;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.studio-button:hover{
+    transform:scale(1.05);
+}
+
+
+/* PORTFOLIO SLIDER */
+
 .slider{
     position:relative;
     max-width:700px;
@@ -39,7 +155,19 @@
     transform:scale(1.15);
 }
 
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #333;
+    color:#999;
+}
+
+
 @media (max-width:600px){
+
+    h1{
+        font-size:2rem;
+    }
 
     .slider{
         gap:5px;
