@@ -1,57 +1,32 @@
-.slider{
-    position:relative;
-    max-width:700px;
-    margin:30px auto 0;
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
+const track = document.querySelector('.slider-track');
+const slides = document.querySelectorAll('.slider-track img');
 
-.slider-window{
-    overflow:hidden;
-    width:100%;
-    border-radius:12px;
-}
+const prevButton = document.querySelector('.slider-btn.prev');
+const nextButton = document.querySelector('.slider-btn.next');
 
-.slider-track{
-    display:flex;
-    transition:transform 0.4s ease;
-}
+let currentSlide = 0;
 
-.slider-track img{
-    width:100%;
-    min-width:100%;
-    height:500px;
-    object-fit:cover;
-    display:block;
-}
+function showSlide(index){
 
-.slider-btn{
-    background:none;
-    border:none;
-    color:#d4af37;
-    font-size:40px;
-    cursor:pointer;
-    padding:10px;
-}
-
-.slider-btn:hover{
-    transform:scale(1.15);
-}
-
-@media (max-width:600px){
-
-    .slider{
-        gap:5px;
+    if(index < 0){
+        currentSlide = slides.length - 1;
     }
 
-    .slider-track img{
-        height:400px;
+    else if(index >= slides.length){
+        currentSlide = 0;
     }
 
-    .slider-btn{
-        font-size:30px;
-        padding:5px;
+    else{
+        currentSlide = index;
     }
 
+    track.style.transform = translateX(-${currentSlide * 100}%);
 }
+
+nextButton.addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+});
+
+prevButton.addEventListener('click', () => {
+    showSlide(currentSlide - 1);
+});
