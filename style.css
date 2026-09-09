@@ -116,3 +116,39 @@ footer{
     border-top:1px solid #333;
     color:#999;
 }
+.portfolio{
+    text-align:center;
+}
+
+.gallery{
+    max-width:800px;
+    margin:30px auto;
+    overflow:hidden;
+}
+
+.gallery img{
+    width:100%;
+    display:none;
+    border-radius:20px;
+    border:3px solid #d4af37;
+    box-shadow:0 0 20px rgba(212,175,55,0.3);
+}
+
+.gallery img.active{
+    display:block;
+}
+
+.gallery-controls{
+    margin-top:15px;
+}
+
+.gallery-controls button{
+    background:#d4af37;
+    color:#000;
+    border:none;
+    padding:10px 20px;
+    margin:0 10px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+}
