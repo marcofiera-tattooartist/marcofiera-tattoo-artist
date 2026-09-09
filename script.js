@@ -1,59 +1,57 @@
-const galleryImages = document.querySelectorAll('.gallery img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-
-const closeBtn = document.querySelector('.close');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-
-let currentIndex = 0;
-
-galleryImages.forEach((img, index) => {
-
-    img.addEventListener('click', () => {
-
-        currentIndex = index;
-
-        lightboxImg.src = img.src;
-        lightbox.style.display = 'flex';
-
-    });
-
-});
-
-function showImage(index){
-
-    if(index < 0){
-        currentIndex = galleryImages.length - 1;
-    }
-
-    else if(index >= galleryImages.length){
-        currentIndex = 0;
-    }
-
-    else{
-        currentIndex = index;
-    }
-
-    lightboxImg.src = galleryImages[currentIndex].src;
+.slider{
+    position:relative;
+    max-width:700px;
+    margin:30px auto 0;
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
-nextBtn.addEventListener('click', () => {
-    showImage(currentIndex + 1);
-});
+.slider-window{
+    overflow:hidden;
+    width:100%;
+    border-radius:12px;
+}
 
-prevBtn.addEventListener('click', () => {
-    showImage(currentIndex - 1);
-});
+.slider-track{
+    display:flex;
+    transition:transform 0.4s ease;
+}
 
-closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-});
+.slider-track img{
+    width:100%;
+    min-width:100%;
+    height:500px;
+    object-fit:cover;
+    display:block;
+}
 
-lightbox.addEventListener('click', (e) => {
+.slider-btn{
+    background:none;
+    border:none;
+    color:#d4af37;
+    font-size:40px;
+    cursor:pointer;
+    padding:10px;
+}
 
-    if(e.target === lightbox){
-        lightbox.style.display = 'none';
+.slider-btn:hover{
+    transform:scale(1.15);
+}
+
+@media (max-width:600px){
+
+    .slider{
+        gap:5px;
     }
 
-});
+    .slider-track img{
+        height:400px;
+    }
+
+    .slider-btn{
+        font-size:30px;
+        padding:5px;
+    }
+
+}
