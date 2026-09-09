@@ -154,3 +154,36 @@ footer{
     font-size:36px;
     padding:10px 25px;
 }
+.gallery{
+    position:relative;
+    max-width:800px;
+    margin:30px auto;
+}
+
+.gallery-controls{
+    position:relative;
+}
+
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:60px;
+    color:#d4af37;
+    cursor:pointer;
+    user-select:none;
+    z-index:10;
+    transition:0.3s;
+}
+
+.arrow:hover{
+    transform:translateY(-50%) scale(1.15);
+}
+
+.arrow.left{
+    left:20px;
+}
+
+.arrow.right{
+    right:20px;
+}
