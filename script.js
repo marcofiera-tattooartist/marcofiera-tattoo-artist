@@ -1,32 +1,34 @@
-const track = document.querySelector('.slider-track');
-const slides = document.querySelectorAll('.slider-track img');
+const photos = document.querySelectorAll('.gallery img');
 
-const prevButton = document.querySelector('.slider-btn.prev');
-const nextButton = document.querySelector('.slider-btn.next');
+let current = 0;
 
-let currentSlide = 0;
+function showPhoto(index){
 
-function showSlide(index){
+    photos.forEach(photo => {
+        photo.classList.remove('active');
+    });
 
-    if(index < 0){
-        currentSlide = slides.length - 1;
-    }
-
-    else if(index >= slides.length){
-        currentSlide = 0;
-    }
-
-    else{
-        currentSlide = index;
-    }
-
-    track.style.transform = translateX(-${currentSlide * 100}%);
+    photos[index].classList.add('active');
 }
 
-nextButton.addEventListener('click', () => {
-    showSlide(currentSlide + 1);
-});
+function nextPhoto(){
 
-prevButton.addEventListener('click', () => {
-    showSlide(currentSlide - 1);
-});
+    current++;
+
+    if(current >= photos.length){
+        current = 0;
+    }
+
+    showPhoto(current);
+}
+
+function prevPhoto(){
+
+    current--;
+
+    if(current < 0){
+        current = photos.length - 1;
+    }
+
+    showPhoto(current);
+}
