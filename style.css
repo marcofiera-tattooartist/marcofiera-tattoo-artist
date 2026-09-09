@@ -23,7 +23,11 @@ h1,h2{
     text-align:center;
     padding:20px;
 }
-
+.about p{
+    max-width:800px;
+    margin:0 auto;
+    text-align:center;
+}
 .logo{
     width:180px;
     max-width:70%;
