@@ -60,7 +60,9 @@ h1{
     justify-content:center;
 }
 
-.buttons a{
+.buttons a,
+.studio a{
+    display:inline-block;
     text-decoration:none;
     color:black;
     background:#d4af37;
@@ -70,10 +72,10 @@ h1{
     transition:0.3s;
 }
 
-.buttons a:hover{
+.buttons a:hover,
+.studio a:hover{
     transform:scale(1.05);
 }
-
 section{
     max-width:1000px;
     margin:auto;
