@@ -6,10 +6,15 @@ function showPhoto(index) {
 
     photos.forEach(photo => {
         photo.classList.remove('active');
+
+        // Se è il video, lo mettiamo in pausa quando non è visibile
+        if (photo.tagName === 'VIDEO') {
+            photo.pause();
+            photo.currentTime = 0;
+        }
     });
 
     photos[index].classList.add('active');
-
 }
 
 function nextPhoto() {
@@ -21,7 +26,6 @@ function nextPhoto() {
     }
 
     showPhoto(current);
-
 }
 
 function prevPhoto() {
@@ -33,7 +37,7 @@ function prevPhoto() {
     }
 
     showPhoto(current);
-
 }
 
+showPhoto(current);
 showPhoto(current);
