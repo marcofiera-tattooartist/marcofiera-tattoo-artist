@@ -187,3 +187,9 @@ footer{
 .arrow.right{
     right:20px;
 }
+.video-frame{
+    border:2px solid #d4af37;
+    border-radius:12px;
+    margin-top:20px;
+    box-shadow:0 0 15px rgba(212,175,55,0.2);
+}
