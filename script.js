@@ -40,4 +40,4 @@ function prevPhoto() {
 }
 
 showPhoto(current);
-showPhoto(current);
+
