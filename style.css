@@ -167,38 +167,21 @@ footer{
 /* CONTROLLI DELLA GALLERIA */
 
 .gallery-controls{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    pointer-events:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    margin-top:15px;
 }
 
-
-/* FRECCE */
-
 .arrow{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    font-size:60px;
+    font-size:50px;
     color:#d4af37;
     cursor:pointer;
     user-select:none;
-    z-index:10;
     transition:0.3s;
-    pointer-events:auto;
 }
 
 .arrow:hover{
-    transform:translateY(-50%) scale(1.15);
-}
-
-.arrow.left{
-    left:20px;
-}
-
-.arrow.right{
-    right:20px;
+    transform:scale(1.15);
 }
